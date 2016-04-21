@@ -54,5 +54,6 @@ describe('Swedish SSN validator', function() {
     SSN('000000x0000').should.have.property('isValid').eql(false)
     SSN('19840607-9367').should.have.property('isValid').eql(false)
     SSN('140930-7188').should.have.property('isValid').eql(false)
+    SSN('123456-1239').should.have.property('isValid').eql(false)
   })
 })

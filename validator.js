@@ -42,17 +42,23 @@
     }
 
     function getBirthDate() {
+      var year = -1
+      var month = -1
+      var day = -1
+
       if (signIndex === 6) {
-        var year = numberAt(0, 2)
-        var month = numberAt(2, 4)
-        var day = numberAt(4, 6)
+        year = numberAt(0, 2)
+        month = numberAt(2, 4)
+        day = numberAt(4, 6)
         var currentYear = new Date().getFullYear() - 2000
         year += (year > currentYear) ? 1900 : 2000
-        return new Date(year, month, day)
       } else if (signIndex === 8) {
-        var year = numberAt(0, 4)
-        var month = numberAt(4, 6)
-        var day = numberAt(6, 8)
+        year = numberAt(0, 4)
+        month = numberAt(4, 6)
+        day = numberAt(6, 8)
+      }
+
+      if (year >= 1900 && year <= 2099 && month >= 1 && month <= 12 && day >= 1 && day <= 31) {
         return new Date(year, month, day)
       }
     }
