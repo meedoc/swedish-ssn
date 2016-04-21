@@ -1,0 +1,29 @@
+{
+  "name": "swedish-ssn",
+  "version": "1.0.0",
+  "description": "Swedish SSN validator and information extractor",
+  "main": "validator.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha",
+    "lint": "./node_modules/.bin/eslint . -f table; exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/meedoc/swedish-ssn.git"
+  },
+  "author": "Nikolai Obedin <nikolai@meedoc.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meedoc/swedish-ssn/issues"
+  },
+  "homepage": "https://github.com/meedoc/swedish-ssn#readme",
+  "dependencies": {
+    "lodash": "4.11.1"
+  },
+  "devDependencies": {
+    "eslint": "2.7.0",
+    "eslint-config-meedoc": "https://github.com/meedoc/eslint-config-meedoc.git#master",
+    "mocha": "2.4.5",
+    "should": "8.3.1"
+  }
+}
