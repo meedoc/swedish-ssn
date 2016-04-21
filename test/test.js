@@ -39,6 +39,12 @@ describe('Swedish SSN validator', function() {
       gender: 'male',
       birthDate: new Date(2015, 1, 1)
     })
+    SSN('19120101+1234').should.eql({
+      number: '19120101+1234',
+      isValid: true,
+      gender: 'male',
+      birthDate: new Date(1912, 1, 1)
+    })
   })
 
   it('should recognize invalid numbers', function() {
